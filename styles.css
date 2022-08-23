@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Karla', sans-serif;
+  font-size: calc(14px + 0.390625vw);
+  color: var(--grayish-blue);
+}
+
+body {
+  background-color: var(--light-gray);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+	justify-content: center;
+
+}
+
+a {
+  text-decoration: none;
+  color: var(--cyan);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  width: min(40ch, 100% - 2rem);
+}
+
+.container > section {
+  width: 100%;
+  padding: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
+
+
+/* <-- JOIN CONTAINER --> */
+
+
+
+.join-container {
+  background-color: white;
+  border-radius: 5px 5px 0 0;
+}
+
+.join-container h3 {
+  color: var(--cyan);
+}
+
+.join-container h4 {
+  color: var(--bright-yellow);
+}
+
+.join-container p {
+  line-height: 1.5rem;
+}
+
+
+/* <-- PRICE CONTAINER --> */
+
+
+.price-container {
+  background-color: var(--cyan);
+  color: white;
+}
+
+.price-dollar {
+  display: flex;
+  font-size: 2rem;
+  gap: .9rem;
+}
+
+.price-month{
+  align-self: center;
+  font-size: 1rem;
+  color: hsl(217, 30%, 76%);
+}
+
+.price-button {
+  width: 100%;
+  text-align: center;
+  
+  background-color: var(--bright-yellow);
+  border: none;
+  border-radius: 5px;
+}
+
+.price-button:hover {
+  background-color: white;
+}
+
+.price-button a {
+  display: block;
+  padding: .8rem;
+  color: white;
+  font-size: .9rem;
+  font-weight: 700;
+}
+
+.price-button a:hover {
+  color: var(--bright-yellow);
+}
+
+/* <-- WHY-US CONTAINER */
+
+.whyUs-container {
+  background-color: hsla(179, 62%, 43%, 0.699);
+  color: var(--light-gray);
+  font-size: .9rem;
+  border-radius: 0 0 5px 5px;
+}
+
+.whyUs-container h3 {
+  color: white;
+  font-size: 1rem;
+}
+
+
+/* RESPONSIVE DESIGN  */
+
+@media screen and (min-width: 625px) {
+
+  html {
+    font-size: calc(15px + 0.390625vw);
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: min(60ch, 100% - 2rem);
+  } 
+  
+  .join-container {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  } 
+
+  .price-container {
+    border-radius: 0 0 0 5px;
+  }
+
+  .whyUs-container {
+    border-radius: 0 0 5px 0;
+  }
+}
+
+
+/* FOOTER */
+
+footer{
+  text-align: center;
+  margin-bottom: .5rem;
+  color: rgb(0, 0, 0);
+}
+
+footer a:hover {
+  color: hsla(179, 62%, 43%, 0.699);
+} 
