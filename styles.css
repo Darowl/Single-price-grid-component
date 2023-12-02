@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
 
-
 :root {
   --cyan: hsl(179, 62%, 43%);
   --bright-yellow: hsl(71, 73%, 54%);
@@ -15,153 +14,163 @@
   box-sizing: border-box;
 }
 
-html {
-  font-family: 'Karla', sans-serif;
-  font-size: calc(14px + 0.390625vw);
-  color: var(--grayish-blue);
-}
-
 body {
+  font-family: 'Karla', sans-serif;
   background-color: var(--light-gray);
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-	justify-content: center;
+  font-size: calc(12px + 1vw);
+  color: var(--grayish-blue);
+  position: relative;
 
 }
 
 a {
   text-decoration: none;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2.5rem;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.25);
+  display: grid; 
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr .75fr .80fr;
+  min-width: 320px;
+  max-width: 600px;
+
+}
+
+/* <-- JOIN OUR COMMUNITY CONTAINER --> */
+
+.card__community {
+  padding: 2rem 1.75rem;
+  background-color: #fff;
+  border-radius: 6px 6px 0 0;
+}
+
+.card__community h2 {
   color: var(--cyan);
+  margin-bottom: 1.50rem;
+  /* I don't get at all how to use clamp for fluent typography */
+  font-size: clamp(.80rem, .95rem + 1vw, 1.4rem);
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  margin: 2rem;
-  width: min(40ch, 100% - 2rem);
-}
-
-.container > section {
-  width: 100%;
-  padding: 1rem;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: .8rem;
-}
-
-
-/* <-- JOIN CONTAINER --> */
-
-
-
-.join-container {
-  background-color: white;
-  border-radius: 5px 5px 0 0;
-}
-
-.join-container h3 {
-  color: var(--cyan);
-}
-
-.join-container h4 {
+.card__community h4 {
   color: var(--bright-yellow);
-}
-
-.join-container p {
-  line-height: 1.5rem;
-}
-
-
-/* <-- PRICE CONTAINER --> */
-
-
-.price-container {
-  background-color: var(--cyan);
-  color: white;
-}
-
-.price-dollar {
-  display: flex;
-  font-size: 2rem;
-  gap: .9rem;
-}
-
-.price-month{
-  align-self: center;
-  font-size: 1rem;
-  color: hsl(217, 30%, 76%);
-}
-
-.price-button {
-  width: 100%;
-  text-align: center;
-  
-  background-color: var(--bright-yellow);
-  border: none;
-  border-radius: 5px;
-}
-
-.price-button:hover {
-  background-color: white;
-}
-
-.price-button a {
-  display: block;
-  padding: .8rem;
-  color: white;
-  font-size: .9rem;
+  margin-bottom: .75rem;
+  line-height: 1.75rem;
+  font-size: clamp(.70rem, .85rem + 1vw, 1.05rem);
   font-weight: 700;
 }
 
-.price-button a:hover {
-  color: var(--bright-yellow);
+.card__community p {
+  line-height: 1.75rem;
+  font-size: clamp(.50rem, .56rem + 1vw, .93rem);
+}
+
+
+/* <-- PRICE SUBSCRIPTION CONTAINER --> */
+
+.card__subscription {
+  background-color: var(--cyan);
+  color: #fff;
+  padding: 1.75rem;
+}
+
+.card__subscription h3 {
+  font-size: clamp(.70rem, .75rem + 1vw, 1.1rem);
+  margin-bottom: 1.5rem;
+}
+
+.card__subscription__price {
+  display: flex;
+  font-size: 2rem;
+  gap: .9rem;
+  margin-bottom: .75rem;
+}
+
+.card__subscription__price > span{
+  align-self: center;
+  font-size: 1rem;
+  color: var(--light-gray);
+  filter: opacity(50%);
+}
+
+.card__subscription p {
+  font-size: clamp(.70rem, .85rem + 1vw, .95rem);
+  margin-bottom: 2rem;
+}
+
+.card__subscription a {
+  background-color: var(--bright-yellow);
+  display: inline-block;
+  width: 100%;
+  padding: 1rem 0;
+  border-radius: 6px;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.082);
+  font-size: .90rem;
+  transition: 150ms;
+}
+
+.card__subscription a:hover {
+  filter: brightness(90%);
 }
 
 /* <-- WHY-US CONTAINER */
 
-.whyUs-container {
+.card__description {
   background-color: hsla(179, 62%, 43%, 0.699);
   color: var(--light-gray);
   font-size: .9rem;
-  border-radius: 0 0 5px 5px;
+  border-radius: 0 0 6px 6px;
+  padding: 1.75rem;
 }
 
-.whyUs-container h3 {
-  color: white;
-  font-size: 1rem;
+.card__description h3 {
+  color: #fff;
+  font-size: clamp(.75rem, .90rem + 1vw, 1.1rem);
+  margin-bottom: 1.50rem;
+}
+
+.card__description p {
+  font-size: clamp(.50rem, .56rem + 1vw, .85rem);
+  color: rgba(230, 239, 245, 0.774);
+  line-height: 1.25rem;
 }
 
 
 /* RESPONSIVE DESIGN  */
 
-@media screen and (min-width: 625px) {
+@media screen and (min-width: 800px) {
 
-  html {
-    font-size: calc(15px + 0.390625vw);
-  }
-
-  .container {
-    display: grid;
+  .card {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    width: min(60ch, 100% - 2rem);
-  } 
+    grid-template-rows: .25fr .50fr ;
+    max-width: 600px;
   
-  .join-container {
-    grid-column-start: 1;
-    grid-column-end: 3;
-  } 
-
-  .price-container {
-    border-radius: 0 0 0 5px;
   }
 
-  .whyUs-container {
-    border-radius: 0 0 5px 0;
+  .card__community {
+    grid-column: 1 / 3;
+    padding: 2rem;
+  }
+
+  .card__subscription {
+    border-radius: 0px 0px 0px 6px;
+  }
+
+  .card__description {
+    border-radius: 0px 0px 6px 0px;
   }
 }
 
@@ -169,11 +178,23 @@ a {
 /* FOOTER */
 
 footer{
-  text-align: center;
-  margin-bottom: .5rem;
-  color: rgb(0, 0, 0);
+  position: absolute;
+  bottom: 25px;
+  left: 36%;
+  font-size: clamp(.50rem, .56rem + 1vw, .93rem);
+  color: transparent;
+  transition: 350ms;
+}
+
+footer a {
+  color: inherit;
+  transition: 10  0ms;
+}
+
+footer:hover {
+  color: #000;
 }
 
 footer a:hover {
-  color: hsla(179, 62%, 43%, 0.699);
+  color: hsl(179, 62%, 43%);
 } 
