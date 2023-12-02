@@ -1,51 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta lang="en">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Single Price Grid Component</title>
-
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="container">
-    <section class="join-container">
-      <h3>Join our community</h3>
-      <h4>30-day, hassle-free money back guarantee</h4>
-      <p>Gain access to our full library of tutorials along with expert code reviews. Perfect for any developers who are serious about honing their skills.</p>
-    </section>
-
-    <section class="price-container">
-      <h3>Monthly Subscription</h3>
-      <div class="price-dollar">&dollar;29 <span class="price-month">per month </span></div>
-      <p>Full access for less than &dollar;1 a day
-      </p>
-      <form action="#">
-        <button class="price-button"> <a href="#">Sign Up</a></button>
-      </form>
-    </section>
-
-    <section class="whyUs-container">
-      <h3>Why Us</h3>
-      <p>  Tutorials by industry experts <br>
-        Peer &amp; expert code review <br>
-        Coding exercises <br>  
-        Access to our GitHub repos <br>
-        Community forum <br>
-        Flashcard decks <br>
-        New videos every week</p>
-    </section>
+  <main>
+    <div class="card">
+      <section class="card__community">
+        <h2>Join our community</h2>
+        <h4>30-day, hassle-free money back guarantee</h4>
+        <p>Gain access to our full library of tutorials along with expert code reviews. Perfect for any developers who are serious about honing their skills.</p>
+      </section>
+  
+      <section class="card__subscription">
+        <h3>Monthly Subscription</h3>
+        <div class="card__subscription__price">&dollar;29 <span>per month </span></div>
+        <p>Full access for less than &dollar;1 a day
+        </p>
+        <a href="#">Sign Up</a>
+      </section>
+  
+      <section class="card__description">
+        <h3>Why Us</h3>
+        <p>  Tutorials by industry experts <br>
+          Peer &amp; expert code review <br>
+          Coding exercises <br>  
+          Access to our GitHub repos <br>
+          Community forum <br>
+          Flashcard decks <br>
+          New videos every week</p>
+      </section>
+    </div>
   </main>
-
-   
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="https://github.com/Darowl">Darowl.dev</a>.
-    </p>
-  </footer>
 </body>
 </html>
