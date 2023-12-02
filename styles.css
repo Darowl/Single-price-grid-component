@@ -62,7 +62,7 @@ main {
   font-size: clamp(.80rem, .95rem + 1vw, 1.4rem);
 }
 
-.card__community h4 {
+.card__community h3 {
   color: var(--bright-yellow);
   margin-bottom: .75rem;
   line-height: 1.75rem;
