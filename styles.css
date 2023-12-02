@@ -172,6 +172,10 @@ main {
   .card__description {
     border-radius: 0px 0px 6px 0px;
   }
+
+  .card__description, .card__subscription {
+    padding-top: 2.25rem;
+  }
 }
 
 
